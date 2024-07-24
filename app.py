@@ -13,7 +13,7 @@ from streamlit_chat import message
 import streamlit as st
 
 # Set your Hugging Face token
-os.environ["HUGGINGFACE_TOKEN"] = "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"
+os.environ["HUGGINGFACE_TOKEN"] = "Your Huggingface Token"
 
 model_id = 'meta-llama/Llama-2-7b-chat-hf'
 
@@ -29,7 +29,7 @@ bnb_config = transformers.BitsAndBytesConfig(
 )
 
 # Begin initializing HF items, you need an access token
-hf_auth = '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'
+hf_auth = 'Your Huggingface Token'
 model_config = AutoConfig.from_pretrained(
     model_id,
     use_auth_token=hf_auth
@@ -114,7 +114,7 @@ def get_response(user_input):
     chat_history = [(query, result["answer"])]
     return result
 
-st.title("ChatGPT ChatBot With Streamlit and OpenAI")
+st.title("LegalEase")
 
 if 'user_input' not in st.session_state:
     st.session_state['user_input'] = []
