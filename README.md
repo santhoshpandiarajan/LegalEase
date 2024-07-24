@@ -1,2 +1,2 @@
-# LAW_AI
+# LegalEase
 
